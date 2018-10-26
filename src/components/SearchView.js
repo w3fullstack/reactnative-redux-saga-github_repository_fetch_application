@@ -45,6 +45,8 @@ class SearchView extends Component{
       this.props.handleSetFetchTimer(
         setTimeout(() =>  {
           AsyncStorage.setItem('repo_name', e);
+          this.props.handleSetCntChecked(0);
+          this.props.handleSetCntCheckedStars(0);
           this.props.handleFetchRepo(e);
         }, 1000)
       );
